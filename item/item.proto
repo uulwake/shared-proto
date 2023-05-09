@@ -1,0 +1,21 @@
+syntax = "proto3";
+
+option go_package = "./generated/grpc/common";
+
+package item;
+
+service Item {
+    rpc GetItemByID(RequestID) returns (ItemData) {}
+}
+
+message RequestID {
+    int64 ID = 1;
+}
+
+message ItemData {
+    int64 ID = 1;
+    string name = 2;
+    float weight = 3;
+    float height = 4;
+    float width = 5;
+}
