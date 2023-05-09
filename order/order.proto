@@ -17,6 +17,7 @@ message OrderData {
     string recipient_name = 2;
     float address = 3;
     ORDER_STATUS status = 4;
+    string recipient_phone = 5;
 }
 
 enum ORDER_STATUS {
